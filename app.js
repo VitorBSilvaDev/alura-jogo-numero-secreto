@@ -11,8 +11,7 @@ boasVindas();
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(chute == numeroSecreto);
-
+    
     if (chute == numeroSecreto) {
         let mensagemTentativas = tentativas > 1 ? "tentativas" : "tentativa";
         let mensagemSucesso = `Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} ${mensagemTentativas}`
@@ -21,7 +20,6 @@ function verificarChute() {
         exibirTextoNaTela('p', mensagemSucesso);
 
         document.getElementById('reiniciar').removeAttribute('disabled');
-        console.log(listaNumeroSorteado);
     } else {
         exibirTextoNaTela('h1', 'ERRADO!')
         if (chute > numeroSecreto) {
@@ -42,10 +40,10 @@ function gerarNumeroAleatorio() {
     let quantidadeNumeroSorteado = listaNumeroSorteado.length;
     console.log(quantidadeNumeroSorteado);
 
-    // 3) Função recursiva = Chama a si mesma
     if (quantidadeNumeroSorteado == numeroLimite) {
         listaNumeroSorteado = [];
     }
+    // 3) Função recursiva = Chama a si mesma
     if (listaNumeroSorteado.includes(numeroEscolhido)){
         return gerarNumeroAleatorio();
     } else {
