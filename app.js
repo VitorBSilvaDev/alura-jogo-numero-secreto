@@ -37,7 +37,7 @@ function verificarChute() {
 
 // 2) Função sem parâmetro com retorno
 function gerarNumeroAleatorio() {
-    let numeroLimite = 3;
+    let numeroLimite = 10;
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let quantidadeNumeroSorteado = listaNumeroSorteado.length;
     console.log(quantidadeNumeroSorteado);
